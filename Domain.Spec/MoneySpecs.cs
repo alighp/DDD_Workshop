@@ -1,7 +1,7 @@
 using AutoFixture;
 using AutoFixture.Xunit2;
 using FluentAssertions;
-namespace DomainTests;
+namespace Domain.Spec;
 
 
 public class MoneySpecs
