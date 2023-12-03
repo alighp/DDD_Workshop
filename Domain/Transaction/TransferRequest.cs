@@ -1,4 +1,4 @@
-public class TransferRequest
+public class TransferRequest : ValueObject
 {
     public TransactionParties Parties { get; }
     public Money Amount { get; }
@@ -6,5 +6,10 @@ public class TransferRequest
     {
         Parties = parties;
         Amount = amount;
+    }
+    protected override IEnumerable<object> GetEqualityComponents()
+    {
+        yield return Parties;
+        yield return Amount;
     }
 }
